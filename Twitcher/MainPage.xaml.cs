@@ -50,7 +50,7 @@ namespace Twitcher
 
         private void tweetDetail(object sender, System.Windows.Input.GestureEventArgs e)
         {
-
+            NavigationService.Navigate(new Uri("/tweetDetails.xaml", UriKind.Relative));
         }
     }
 }

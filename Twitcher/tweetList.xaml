@@ -14,7 +14,8 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" RenderTransformOrigin="0.5,0.5">
+    <Grid x:Name="LayoutRoot" RenderTransformOrigin="0.5,0.5" Background="#FF1F1F1F">
+
 
         <!--        Set Background        -->
         <Grid.RowDefinitions>
@@ -27,12 +28,17 @@
 
             <!--        Grid Deffinitions        -->
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="24" />
                 <ColumnDefinition />
                 <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
+                <ColumnDefinition Width ="24" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
@@ -46,40 +52,63 @@
             </Grid.RowDefinitions>
 
             <!--        Title        -->
-            <StackPanel Grid.ColumnSpan="4" Grid.RowSpan="2" x:Name="TitlePanel" HorizontalAlignment="Center">
-                <TextBlock Margin="0,18,0,0" Text="Tweets" Style="{StaticResource PhoneTextTitle1Style}" Height="110" FontSize="{StaticResource PivotHeaderFontSize}" FontFamily="Segoe WP Light" LineHeight="6" FontStretch="Expanded" CharacterSpacing="150" Width="470" Foreground="#FF4099FF" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Medium"/>
+            <StackPanel Grid.ColumnSpan="4" Grid.RowSpan="2" x:Name="TitlePanel">
+                <TextBlock Text="Tweets" FontFamily="Nyala" LineHeight="6" CharacterSpacing="150" Foreground="White" FontWeight="Light" FontSize="50" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="0,24,0,0"/>
             </StackPanel>
 
+            <Rectangle  Grid.ColumnSpan ="4" Canvas.ZIndex="-1" Margin="0,0,0,199" Grid.RowSpan="4">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="#FF4099FF" Opacity="0.8"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            
             <!-- TWEETS WILL LOAD WITH JSON USING LONG LIST SELECTOR, DATA TEMPLATS, AND ITEM BINDINGS -->
+            <!-- TWEETS @TWITCHER -->
+            <ListBox Grid.ColumnSpan="4" Grid.RowSpan="16" Grid.Row="2">
+                <ListBox.Items>
 
-            <StackPanel Tap="tweetDetail" Orientation="Horizontal" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="2" >
-                <Image Source="Assets/images/tweet.png" Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="6,0,0,0" />
-                <StackPanel Width="342">
-                    <TextBlock Text="Sandwiches" Style="{StaticResource PhoneTextLargeStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" />
-                    <TextBlock Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text." Style="{StaticResource PhoneTextSubtleStyle}" FontFamily="Arial" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="12,0,0,0" Width="330" Padding="0,0,0,8" />
-                </StackPanel>
-            </StackPanel>
-            <StackPanel Tap="tweetDetail" Orientation="Horizontal" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="4" >
-                <Image Source="Assets/images/tweet.png" Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="6,0,0,0" />
-                <StackPanel Width="342">
-                    <TextBlock Text="Sandwiches" Style="{StaticResource PhoneTextLargeStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" />
-                    <TextBlock Text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC." Style="{StaticResource PhoneTextSubtleStyle}" FontFamily="Arial" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="12,0,0,0" Width="330" Padding="0,0,0,8" />
-                </StackPanel>
-            </StackPanel>
-            <StackPanel Tap="tweetDetail" Orientation="Horizontal" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="6" >
-                <Image Source="Assets/images/tweet.png" Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="6,0,0,0" />
-                <StackPanel Width="342">
-                    <TextBlock Text="Sandwiches" Style="{StaticResource PhoneTextLargeStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" />
-                    <TextBlock Text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by inject" Style="{StaticResource PhoneTextSubtleStyle}" FontFamily="Arial" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="12,0,0,0" Width="330" Padding="0,0,0,8" />
-                </StackPanel>
-            </StackPanel>
-            <StackPanel Tap="tweetDetail" Orientation="Horizontal" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="8" >
-                <Image Source="Assets/images/tweet.png" Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="6,0,0,0" />
-                <StackPanel Width="342">
-                    <TextBlock Text="Sandwiches" Style="{StaticResource PhoneTextLargeStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" />
-                    <TextBlock Text="has a more-or-less normal distribution of letters, as opposed to using 'Content here" Style="{StaticResource PhoneTextSubtleStyle}" FontFamily="Arial" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="12,0,0,0" Width="330" Padding="0,0,0,8" />
-                </StackPanel>
-            </StackPanel>
+                    <StackPanel Tap="tweetDetail" Orientation="Horizontal" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="7">
+                        <Image Source="Assets/images/tweet.png" Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="6,0,0,0" />
+                        <StackPanel>
+                            <TextBlock Text="Sandwiches" Style="{StaticResource PhoneTextLargeStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                            <TextBlock Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text." Style="{StaticResource PhoneTextSubtleStyle}" FontFamily="OCR A Extended" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="12,0,0,0" Width="348" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Tap="tweetDetail" Orientation="Horizontal" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="7">
+                        <Image Source="Assets/images/tweet.png" Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="6,0,0,0" />
+                        <StackPanel>
+                            <TextBlock Text="Sandwiches" Style="{StaticResource PhoneTextLargeStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                            <TextBlock Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text." Style="{StaticResource PhoneTextSubtleStyle}" FontFamily="OCR A Extended" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="12,0,0,0" Width="348" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Tap="tweetDetail" Orientation="Horizontal" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="7">
+                        <Image Source="Assets/images/tweet.png" Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="6,0,0,0" />
+                        <StackPanel>
+                            <TextBlock Text="Sandwiches" Style="{StaticResource PhoneTextLargeStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                            <TextBlock Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text." Style="{StaticResource PhoneTextSubtleStyle}" FontFamily="OCR A Extended" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="12,0,0,0" Width="348" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Tap="tweetDetail" Orientation="Horizontal" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="7">
+                        <Image Source="Assets/images/tweet.png" Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="6,0,0,0" />
+                        <StackPanel>
+                            <TextBlock Text="Sandwiches" Style="{StaticResource PhoneTextLargeStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                            <TextBlock Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text." Style="{StaticResource PhoneTextSubtleStyle}" FontFamily="OCR A Extended" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="12,0,0,0" Width="348" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Tap="tweetDetail" Orientation="Horizontal" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="7">
+                        <Image Source="Assets/images/tweet.png" Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="6,0,0,0" />
+                        <StackPanel>
+                            <TextBlock Text="Sandwiches" Style="{StaticResource PhoneTextLargeStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                            <TextBlock Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text." Style="{StaticResource PhoneTextSubtleStyle}" FontFamily="OCR A Extended" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="12,0,0,0" Width="348" />
+                        </StackPanel>
+                    </StackPanel>
+
+                </ListBox.Items>
+            </ListBox>
         </Grid>
     </Grid>
 

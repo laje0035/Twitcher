@@ -46,80 +46,93 @@
                 <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
             </Grid.RowDefinitions>
 
-            <!--        Title        -->
+            <!--        Title     CHANGE FONT ???   -->
             <StackPanel Grid.ColumnSpan="4" Grid.RowSpan="2" x:Name="TitlePanel">
-                <TextBlock Text="Tweet Search" FontFamily="DengXian" LineHeight="6" FontStretch="Expanded" CharacterSpacing="150" Foreground="White" FontWeight="Medium" FontSize="50" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="0,36,0,0"/>
+                <TextBlock Text="Tweet Search" FontFamily="Quartz MS" LineHeight="6" CharacterSpacing="150" Foreground="White" FontWeight="Light" FontSize="50" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="0,24,0,0"/>
             </StackPanel>
-            
-            <Rectangle  Grid.ColumnSpan ="4" Canvas.ZIndex="-1" Margin="0,0,0,164" Grid.RowSpan="3">
+
+            <Rectangle  Grid.ColumnSpan ="4" Canvas.ZIndex="-1" Margin="0,0,0,180" Grid.RowSpan="4">
                 <Rectangle.Fill>
                     <SolidColorBrush Color="#FF4099FF" Opacity="0.8"/>
                 </Rectangle.Fill>
             </Rectangle>
 
-            <!--        Backbround Box       
-            <Rectangle  Grid.ColumnSpan ="2" Grid.RowSpan="3" Grid.Row="2" Canvas.ZIndex="-1" Margin="0,10" Grid.Column="1">
-                <Rectangle.Fill>
-                    <SolidColorBrush Color="#FF302B2B" Opacity="0.8"/>
-                </Rectangle.Fill> 
-            </Rectangle>-->
-
             <!--        Inputs        -->
-            <StackPanel Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="2"  Margin="0" Grid.Column="1">
-                <TextBlock Text ="Enter Words To Search Twitter:" Margin="0,0,-6,0" Padding="12,0,0,0"/>
-                <TextBox x:Name="InputField" FontFamily="{StaticResource PhoneFontFamilySemiLight}" FontSize="40" Tap="InputField_GotFocus" InputScope="Text" Padding="0" />
+            <StackPanel Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="2" Grid.Column="1">
+                <TextBlock Text ="Enter Words To Search Twitter:" Margin="12,0,0,0" />
+                <TextBox x:Name="InputField" FontSize="40" Tap="InputField_GotFocus" InputScope="Text" Padding="0" FontFamily="Segoe UI Semilight" />
             </StackPanel>
 
             <!--        Buttons        -->
-            <Button x:Name="mapBtn" Grid.Row="4" Margin="0" BorderThickness="1" Tap="mapViewTap" Grid.Column="1" Grid.RowSpan="2" >
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF1F1F1F" Offset="0.93"/>
-                        <GradientStop Color="#FF4099FF" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
+            <Button x:Name="mapBtn" Grid.Row="4" BorderThickness="1" Tap="mapViewTap" Grid.Column="1" Grid.RowSpan="2" Padding="0" Background="#FF4099FF" BorderBrush="#FF4099FF" >
                 <StackPanel Width="230" Height="64" HorizontalAlignment="Center" VerticalAlignment="Center">
-
-                    <TextBlock x:Name="CADText" Text="View On Map" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" Padding="0,10,0,0" Foreground="#FF4099FF" />
+                    <TextBlock Text="View On Map" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" Padding="0,14,0,0" Foreground="#FF1F1F1F" FontWeight="Bold" />
                 </StackPanel>
             </Button>
-            
-            <Button x:Name="listBtn" Grid.Column ="2" Grid.Row="4" Margin="0" BorderThickness="1" Tap="listViewTap" Grid.RowSpan="2" >
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF1F1F1F" Offset="0.93"/>
-                        <GradientStop Color="#FF4099FF" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-                <StackPanel Width="230" Height="64" HorizontalAlignment="Center" VerticalAlignment="Center">
 
-                    <TextBlock Text="View As List" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" Padding="0,10,0,0" Foreground="#FF4099FF" />
+            <Button x:Name="listBtn" Grid.Column ="2" Grid.Row="4" BorderThickness="1" Tap="listViewTap" Grid.RowSpan="2" Background="#FF4099FF" BorderBrush="#FF4099FF" >
+                <StackPanel Width="230" Height="64" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="View As List" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" Padding="0,14,0,0" Foreground="#FF1F1F1F" FontWeight="Bold" />
                 </StackPanel>
             </Button>
-            
-            <StackPanel Tap="tweetDetail" Orientation="Horizontal" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="7" >
-                <Image Source="Assets/images/tweet.png" Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="6,0,0,0" />
-                <StackPanel Width="342">
-                    <TextBlock Text="Sandwiches" Style="{StaticResource PhoneTextLargeStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" />
-                    <TextBlock Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text." Style="{StaticResource PhoneTextSubtleStyle}" FontFamily="OCR A Extended" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="12,0,0,0" Width="330" Padding="0,0,0,8" />
-                </StackPanel>
-            </StackPanel>
-            
-            <StackPanel Tap="tweetDetail" Orientation="Horizontal" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="9" >
-                <Image Source="Assets/images/tweet.png" Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="6,0,0,0" />
-                <StackPanel Width="342">
-                    <TextBlock Text="Sandwiches" Style="{StaticResource PhoneTextLargeStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" />
-                    <TextBlock Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text." Style="{StaticResource PhoneTextSubtleStyle}" FontFamily="OCR A Extended" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="12,0,0,0" Width="330" Padding="0,0,0,8" />
-                </StackPanel>
-            </StackPanel>
+
+            <!-- TWEETS @TWITCHER -->
+            <ListBox Grid.ColumnSpan="4" Grid.RowSpan="10" Grid.Row="7">
+                <ListBox.Items>
+
+                    <StackPanel Tap="tweetDetail" Orientation="Horizontal" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="7">
+                        <Image Source="Assets/images/tweet.png" Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="6,0,0,0" />
+                        <StackPanel>
+                            <TextBlock Text="Sandwiches" Style="{StaticResource PhoneTextLargeStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                            <TextBlock Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text." Style="{StaticResource PhoneTextSubtleStyle}" FontFamily="Segoe UI Light" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="12,0,0,0" Width="348" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Tap="tweetDetail" Orientation="Horizontal" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="7">
+                        <Image Source="Assets/images/tweet.png" Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="6,0,0,0" />
+                        <StackPanel>
+                            <TextBlock Text="Sandwiches" Style="{StaticResource PhoneTextLargeStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                            <TextBlock Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text." Style="{StaticResource PhoneTextSubtleStyle}" FontFamily="Segoe UI Light" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="12,0,0,0" Width="348" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Tap="tweetDetail" Orientation="Horizontal" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="7">
+                        <Image Source="Assets/images/tweet.png" Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="6,0,0,0" />
+                        <StackPanel>
+                            <TextBlock Text="Sandwiches" Style="{StaticResource PhoneTextLargeStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                            <TextBlock Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text." Style="{StaticResource PhoneTextSubtleStyle}" FontFamily="Segoe UI Light" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="12,0,0,0" Width="348" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Tap="tweetDetail" Orientation="Horizontal" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="7">
+                        <Image Source="Assets/images/tweet.png" Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="6,0,0,0" />
+                        <StackPanel>
+                            <TextBlock Text="Sandwiches" Style="{StaticResource PhoneTextLargeStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                            <TextBlock Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text." Style="{StaticResource PhoneTextSubtleStyle}" FontFamily="Segoe UI Light" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="12,0,0,0" Width="348" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Tap="tweetDetail" Orientation="Horizontal" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="7">
+                        <Image Source="Assets/images/tweet.png" Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="6,0,0,0" />
+                        <StackPanel>
+                            <TextBlock Text="Sandwiches" Style="{StaticResource PhoneTextLargeStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                            <TextBlock Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text." Style="{StaticResource PhoneTextSubtleStyle}" FontFamily="Segoe UI Light" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="12,0,0,0" Width="348" />
+                        </StackPanel>
+                    </StackPanel>
+
+                </ListBox.Items>
+            </ListBox>
 
         </Grid>
     </Grid>
-    <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar Mode="Default" Opacity="1.0" IsMenuEnabled="True" IsVisible="True">
-            <shell:ApplicationBarIconButton IconUri="Assets/questionmark.png" Text="Close Keyboard" Click="closeKB" />
+    <phone:PhoneApplicationPage.ApplicationBar> <!-- THERES A SQUARE AROUND THE ICON BUTTON WHEN U RUN THE APP. IT SHOULDNT BE THERE --> 
+        <shell:ApplicationBar Mode="Default" Opacity="1.0" IsMenuEnabled="True" IsVisible="True" ForegroundColor="#FF4099FF">
+            <shell:ApplicationBarIconButton IconUri="Assets/questionmark.png" Text="Close KB" Click="closeKB" />
 
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="Help" Click="AppBarIconBtn"/>

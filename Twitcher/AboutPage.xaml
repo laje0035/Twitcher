@@ -35,7 +35,7 @@
                     </LinearGradientBrush>
                 </TextBlock.Foreground>
             </TextBlock>
-            <TextBlock Text="About" Margin="12,0,0,0" FontSize="{StaticResource PivotHeaderFontSize}" FontFamily="Segoe WP Light" LineHeight="6" FontStretch="Expanded" CharacterSpacing="150" Width="470" Padding="0" Foreground="#FF56A853" />
+            <TextBlock Text="About" Margin="12,0,0,0" FontSize="{StaticResource PivotHeaderFontSize}" FontFamily="Segoe WP Light" LineHeight="6" FontStretch="Expanded" CharacterSpacing="150" Width="470" Padding="0" Foreground="#FF4099FF" />
         </StackPanel>
         <!--ContentPanel - place additional content here-->
         <StackPanel Grid.RowSpan="3" Grid.Row="1" Margin="12,-50,0,0" >
