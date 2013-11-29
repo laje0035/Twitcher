@@ -47,5 +47,10 @@ namespace Twitcher
         {
 
         }
+
+        private void tweetDetail(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+
+        }
     }
 }

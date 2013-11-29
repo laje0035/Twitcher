@@ -24,6 +24,10 @@ namespace Twitcher
             emailComposeTask.To = "four0126@algonquinlive.com";
             emailComposeTask.Show();
         }
+        private void tweetDetail(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/tweetDetails.xaml", UriKind.Relative));
+        }
 
         private void Url_Button_Tap(object sender, RoutedEventArgs e)
         {
