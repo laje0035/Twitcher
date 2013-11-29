@@ -21,9 +21,9 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0">
-            <TextBlock Text="TWITSEARCH " Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Margin="0" Text="Tweets on Map" FontFamily="Segoe WP Light" LineHeight="6" FontStretch="Expanded" CharacterSpacing="150" Width="470" Foreground="#FF4099FF" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Medium" FontSize="48"/>
+        <!--        Title     CHANGE FONT ???   -->
+        <StackPanel x:Name="TitlePanel">
+            <TextBlock Text="Tweet On Map" FontFamily="Quartz MS" LineHeight="6" CharacterSpacing="150" Foreground="White" FontWeight="Light" FontSize="50" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="0,24,0,0"/>
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">

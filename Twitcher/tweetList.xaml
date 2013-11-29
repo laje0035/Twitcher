@@ -61,7 +61,7 @@
                     <SolidColorBrush Color="#FF4099FF" Opacity="0.8"/>
                 </Rectangle.Fill>
             </Rectangle>
-            
+
             <!-- TWEETS WILL LOAD WITH JSON USING LONG LIST SELECTOR, DATA TEMPLATS, AND ITEM BINDINGS -->
             <!-- TWEETS @TWITCHER -->
             <ListBox Grid.ColumnSpan="4" Grid.RowSpan="16" Grid.Row="2">

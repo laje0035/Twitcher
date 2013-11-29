@@ -50,7 +50,16 @@
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
+            <!-- BACKGROUND -->
+            <Rectangle  Grid.ColumnSpan ="3" Canvas.ZIndex="-1" Grid.RowSpan="6" Grid.Column="1" Margin="46,36,-70,-453" Grid.Row="9" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Rectangle.RenderTransform>
+                    <CompositeTransform Rotation="-20.798"/>
+                </Rectangle.RenderTransform>
+                <Rectangle.Fill>
+                    <ImageBrush Stretch="Fill" ImageSource="/Assets/images/tweet2.png" Opacity="0.5"/>
+                </Rectangle.Fill>
 
+            </Rectangle>
             <!--        Title     CHANGE FONT ???   -->
             <StackPanel Grid.ColumnSpan="4" Grid.RowSpan="2" x:Name="TitlePanel">
                 <TextBlock Text="Tweet Search" FontFamily="Quartz MS" LineHeight="6" CharacterSpacing="150" Foreground="White" FontWeight="Light" FontSize="50" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="0,24,0,0"/>
@@ -130,7 +139,8 @@
 
         </Grid>
     </Grid>
-    <phone:PhoneApplicationPage.ApplicationBar> <!-- THERES A SQUARE AROUND THE ICON BUTTON WHEN U RUN THE APP. IT SHOULDNT BE THERE --> 
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <!-- THERES A SQUARE AROUND THE ICON BUTTON WHEN U RUN THE APP. IT SHOULDNT BE THERE -->
         <shell:ApplicationBar Mode="Default" Opacity="1.0" IsMenuEnabled="True" IsVisible="True" ForegroundColor="#FF4099FF">
             <shell:ApplicationBarIconButton IconUri="Assets/questionmark.png" Text="Close KB" Click="closeKB" />
 
