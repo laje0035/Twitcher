@@ -178,6 +178,7 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\images\tri.png" />
     <Content Include="twitter-search.png" />
   </ItemGroup>
   <ItemGroup>

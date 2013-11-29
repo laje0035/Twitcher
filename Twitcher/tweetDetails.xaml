@@ -43,13 +43,11 @@
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            
-            <Rectangle  Grid.ColumnSpan ="4" Canvas.ZIndex="-1" Grid.RowSpan="4" Margin="27.835,66.507,-59.683,-356.331" Grid.Row="6" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                <Rectangle.RenderTransform>
-                    <CompositeTransform Rotation="-20.798"/>
-                </Rectangle.RenderTransform>
+
+            <Rectangle  Grid.ColumnSpan ="4" Canvas.ZIndex="-1" Grid.RowSpan="6" Grid.Row="6" >
+
                 <Rectangle.Fill>
-                    <ImageBrush Stretch="Fill" ImageSource="/Assets/images/tweet2.png" Opacity="0.5"/>
+                    <ImageBrush Stretch="Fill" ImageSource="/Assets/images/tweet2.png" Opacity="0.21"/>
                 </Rectangle.Fill>
 
             </Rectangle>

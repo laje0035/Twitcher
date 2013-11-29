@@ -51,16 +51,13 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <!-- BACKGROUND -->
-            <Rectangle  Grid.ColumnSpan ="3" Canvas.ZIndex="-1" Grid.RowSpan="6" Grid.Column="1" Margin="46,36,-70,-453" Grid.Row="9" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                <Rectangle.RenderTransform>
-                    <CompositeTransform Rotation="-20.798"/>
-                </Rectangle.RenderTransform>
+            <Rectangle  Grid.ColumnSpan ="4" Canvas.ZIndex="-1" Grid.RowSpan="10" Margin="0" Grid.Row="5">
                 <Rectangle.Fill>
-                    <ImageBrush Stretch="Fill" ImageSource="/Assets/images/tweet2.png" Opacity="0.5"/>
+                    <ImageBrush Stretch="Fill" ImageSource="/Assets/images/tweet2.png" Opacity="0.055"/>
                 </Rectangle.Fill>
 
             </Rectangle>
-            <!--        Title     CHANGE FONT ???   -->
+            <!--        Title     CHANGE FONT ???  FONT DOESNT SHOW ON DEVICE -->
             <StackPanel Grid.ColumnSpan="4" Grid.RowSpan="2" x:Name="TitlePanel">
                 <TextBlock Text="Tweet Search" FontFamily="Quartz MS" LineHeight="6" CharacterSpacing="150" Foreground="White" FontWeight="Light" FontSize="50" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="0,24,0,0"/>
             </StackPanel>

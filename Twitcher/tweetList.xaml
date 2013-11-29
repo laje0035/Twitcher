@@ -63,7 +63,6 @@
             </Rectangle>
 
             <!-- TWEETS WILL LOAD WITH JSON USING LONG LIST SELECTOR, DATA TEMPLATS, AND ITEM BINDINGS -->
-            <!-- TWEETS @TWITCHER -->
             <ListBox Grid.ColumnSpan="4" Grid.RowSpan="16" Grid.Row="2">
                 <ListBox.Items>
 
