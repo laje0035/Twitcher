@@ -14,13 +14,38 @@ namespace Twitcher
     public partial class MainPage : PhoneApplicationPage
     {
         // Constructor
+        public static MenuData menuData;
+        //public static MenuDetail menuItemList;
         public MainPage()
         {
             InitializeComponent();
-
+            menuData = new MenuData();
+            DataContext = MenuData.menuJsonData;
+            
             // Set the data context of the listbox control to the sample data
             DataContext = App.ViewModel;
         }
+       
+        private void longListTap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            MenuData.CategoryItem item = ((FrameworkElement)e.OriginalSource).DataContext as MenuData.CategoryItem;
+            menuData.selectedItem = item; // save the category item selected here
+            if (item != null) // if fast-clicking, it is possible to get here with nothing selected.  Ignore
+                NavigationService.Navigate(new Uri("/tweetDetails.xaml", UriKind.Relative));
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+
 
         private void mapViewTap(object sender, System.Windows.Input.GestureEventArgs e)
         {
